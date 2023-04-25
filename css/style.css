@@ -1,0 +1,183 @@
+.box1 {
+	width: 400px;
+	height: 400px;
+	background-color: green;
+	position: relative;
+	opacity: 0.5;
+}
+.box1:hover {
+	opacity: 1;
+}
+
+.box2 {
+	width: 100px;
+	height: 100px;
+	background-color: yellow;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(45deg);
+	transition: all 3s linear 0.4s  ;
+	opacity: 0.3;
+	
+
+
+}
+
+.box2:hover {
+/*transform: translate(-50%, -50%) rotate(0deg);*/
+background-color: black;
+width: 140px;
+opacity: 0.2;
+
+}
+a {
+	transition: 0.5s;
+}
+
+a:hover{
+ color: red;
+ font-size: 23px;
+
+}
+
+img {
+	opacity: 0.7;
+
+}
+
+img:hover {
+	opacity: 1;
+	transition: 1s;
+}
+
+.p-image {
+	width: 500px;
+	height: 600px;
+	background-image: url('https://images.unsplash.com/photo-1508919801845-fc2ae1bc2a28?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1nfGVufDB8fDB8fA%3D%3D&w=1000&q=80');
+	background-size: cover;
+	background-repeat: no-repeat;
+/*	background-position: right top;*/
+		background-position-x: left;
+		background-position-y: top;
+
+}
+
+.red-box {
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	position: absolute;
+	top: 0;
+	left: 0;
+	animation: box-animation 8s infinite ease-in;
+/*	animation-delay: 2s;*/
+}
+
+
+@keyframes box-animation {
+	0% {
+		top: 0;
+		left: 0;
+		transform: rotate(0);
+		opacity: 1;
+	}
+	25% {
+		top: 0;
+		left: 500px;
+		background-color: green;
+		width: 200px;
+		height: 200px;
+	}
+	50% {
+		top: 200px;
+		left: 500px;
+		background-color: yellow;
+		opacity: 0;
+	}
+	75% {
+		top: 200px;
+		left: 0;
+		background-color: blue;
+		width: 400px;
+		height: 100px;
+	}
+	100% {
+		top: 0;
+		left: 0;
+		transform: rotate(360deg);
+		background-color: red;
+		width: 100px;
+		height: 100px;
+		opacity: 1;
+	}
+
+}
+
+.loading-screen {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	animation: loading-rotate 3s infinite;
+width: 266px;
+height: 266px;
+}
+
+.circle {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: blue;
+	display: inline-block;
+	animation: circle-animation 3s infinite;
+	transition: all 0.5s;
+	position: relative;
+
+}
+
+
+.c-1 {
+	animation-delay: 0.5s;
+}
+
+.c-2 {
+	animation-delay: 1s;
+}.c-3 {
+	animation-delay: 1.5s;
+}.c-4 {
+	animation-delay: 2s;
+}.c-5 {
+	animation-delay: 2.5s;
+}
+
+
+
+@keyframes loading-rotate {
+	0% {
+		transform: translate(-50%, -50%) rotate(0);
+	}
+
+	100% {
+		transform: translate(-50%, -50%) rotate(360deg);
+	}
+}
+
+@keyframes circle-animation {
+	0% {
+		margin-bottom: 0px;
+		transition: all 0.5s;
+		opacity: 1;
+	}
+
+	50% {
+		margin-bottom: 80px;
+		transition: all 0.5s;
+		opacity: 0.4;
+	}
+	100% {
+		margin-bottom: 0;
+		opacity: 1;
+	}
+
+}
